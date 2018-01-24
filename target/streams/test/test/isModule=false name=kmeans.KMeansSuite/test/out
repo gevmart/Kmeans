@@ -1,0 +1,19 @@
+[0m[[0minfo[0m] [0m[32mKMeansSuite:[0m[0m
+[0m[[0minfo[0m] [0m[32m- 'classify should work for empty 'points' and empty 'means'[0m[0m
+[0m[[0minfo[0m] [0m[32m- 'classify' should work for empty 'points' and 'means' == GenSeq(Point(1,1,1))[0m[0m
+[0m[[0minfo[0m] [0m[32m- 'classify' should work for 'points' == GenSeq((1, 1, 0), (1, -1, 0), (-1, 1, 0), (-1, -1, 0)) and 'means' == GenSeq((0, 0, 0))[0m[0m
+[0m[[0minfo[0m] [0m[32m- 'classify' should work for 'points' == GenSeq((1, 1, 0), (1, -1, 0), (-1, 1, 0), (-1, -1, 0)) and 'means' == GenSeq((1, 0, 0), (-1, 0, 0))[0m[0m
+[0m[[0minfo[0m] [0m[32m- 'classify with data parallelism should work for empty 'points' and empty 'means'[0m[0m
+[0m[[0minfo[0m] [0m[31m- update without parallelism should work correctly *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  java.util.NoSuchElementException: key not found: (0.0, 0.0, 0.0)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.collection.MapLike$class.default(MapLike.scala:228)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.collection.AbstractMap.default(Map.scala:59)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.collection.MapLike$class.apply(MapLike.scala:141)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at scala.collection.AbstractMap.apply(Map.scala:59)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at kmeans.KMeans.update(KMeans.scala:68)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at kmeans.KMeansSuite.checkUpdate(KMeansSuite.scala:74)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at kmeans.KMeansSuite$$anonfun$6.apply$mcV$sp(KMeansSuite.scala:85)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at kmeans.KMeansSuite$$anonfun$6.apply(KMeansSuite.scala:78)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at kmeans.KMeansSuite$$anonfun$6.apply(KMeansSuite.scala:78)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
